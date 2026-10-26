@@ -1,4 +1,4 @@
-# CEA manuscript code (WWW 2027 revision)
+
 
 ## One-command reproduction
 
