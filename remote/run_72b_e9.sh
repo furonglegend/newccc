@@ -13,7 +13,7 @@ INST=$ROOT/data/e9_questions.jsonl
 IMG=$ROOT/data/cvqa_images
 RET=$ROOT/results/e9/retrieval_e9.jsonl
 
-export PYTHONPATH=/97/fr/m4rag_v42_locked/runtime_pkgs:/97/m4rag_v39_prospective/torch251_pkgs:/97/fr/m4rag_v39_prospective/python_pkgs
+export PYTHONPATH=/97/fr/m4rag_v42_locked/runtime_pkgs:/97/m4rag_v39_prospective/torch251_pkgs:/97/m4rag_v39_prospective/python_pkgs
 export LD_LIBRARY_PATH=$(find /97/m4rag_v39_prospective/python_pkgs/nvidia -type d -name lib | paste -sd: -)
 export TOKENIZERS_PARALLELISM=false
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
