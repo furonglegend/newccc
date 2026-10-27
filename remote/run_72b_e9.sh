@@ -3,18 +3,18 @@
 # One process spans the two free GPUs. Resumable and restartable.
 set -uo pipefail
 
-ROOT=/97/fr/rctu_v47_ceaplus
+ROOT=/97/rctu_v47_ceaplus
 CODE=$ROOT/code
 RES=$ROOT/results/new
 LOGS=$ROOT/logs
-MODEL=/97/fr/m4rag_v39_prospective/models/Qwen2.5-VL-72B-Instruct-AWQ
+MODEL=/97/m4rag_v39_prospective/models/Qwen2.5-VL-72B-Instruct-AWQ
 MAN=$ROOT/data/e9_manifest.jsonl
 INST=$ROOT/data/e9_questions.jsonl
 IMG=$ROOT/data/cvqa_images
 RET=$ROOT/results/e9/retrieval_e9.jsonl
 
-export PYTHONPATH=/97/fr/m4rag_v42_locked/runtime_pkgs:/97/fr/m4rag_v39_prospective/torch251_pkgs:/97/fr/m4rag_v39_prospective/python_pkgs
-export LD_LIBRARY_PATH=$(find /97/fr/m4rag_v39_prospective/python_pkgs/nvidia -type d -name lib | paste -sd: -)
+export PYTHONPATH=/97/fr/m4rag_v42_locked/runtime_pkgs:/97/m4rag_v39_prospective/torch251_pkgs:/97/fr/m4rag_v39_prospective/python_pkgs
+export LD_LIBRARY_PATH=$(find /97/m4rag_v39_prospective/python_pkgs/nvidia -type d -name lib | paste -sd: -)
 export TOKENIZERS_PARALLELISM=false
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export CUDA_VISIBLE_DEVICES=1,3
