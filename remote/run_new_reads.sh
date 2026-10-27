@@ -4,19 +4,19 @@
 # Resumable: every stage skips finished rows and complete files.
 set -uo pipefail
 
-ROOT=/97/fr/rctu_v47_ceaplus
+ROOT=/97/rctu_v47_ceaplus
 CODE=$ROOT/code/new
 RES=$ROOT/results/new
 LOGS=$ROOT/logs
 IMG=$ROOT/data/cvqa_images
 DEV_IMG=$ROOT/results/e2/dev_images
-VLM=/97/fr/m4rag_v39_prospective/models/Qwen2.5-VL-7B-Instruct
-DEV_INST=/97/fr/m4rag/outputs_v12/natural_locked/dev_instances.jsonl
+VLM=/97/m4rag_v39_prospective/models/Qwen2.5-VL-7B-Instruct
+DEV_INST=/97/m4rag/outputs_v12/natural_locked/dev_instances.jsonl
 E9_RET=$ROOT/results/e9/retrieval_e9.jsonl
 DEV_RET=$ROOT/results/e2/e2_dev_retrieved.jsonl
 
-export PYTHONPATH=/97/fr/m4rag_v42_locked/runtime_pkgs:/97/fr/m4rag_v39_prospective/torch251_pkgs:/97/fr/m4rag_v39_prospective/python_pkgs
-export LD_LIBRARY_PATH=$(find /97/fr/m4rag_v39_prospective/python_pkgs/nvidia -type d -name lib | paste -sd: -)
+export PYTHONPATH=/97/m4rag_v42_locked/runtime_pkgs:/97/m4rag_v39_prospective/torch251_pkgs:/97/m4rag_v39_prospective/python_pkgs
+export LD_LIBRARY_PATH=$(find /97/m4rag_v39_prospective/python_pkgs/nvidia -type d -name lib | paste -sd: -)
 export TOKENIZERS_PARALLELISM=false
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
