@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Final analysis suite for the CEA manuscript (WWW 2027 revision).
+"""Final analysis suite.
 
 Every number that appears in the quantitative tables of the revised paper is
 recomputed here from cached option posteriors.  The script makes no model calls
